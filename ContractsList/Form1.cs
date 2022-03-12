@@ -10,7 +10,6 @@ using System.Windows.Forms;
 
 namespace ContractsList
 {
-    // 
 
     public partial class Authorization : Form
     {

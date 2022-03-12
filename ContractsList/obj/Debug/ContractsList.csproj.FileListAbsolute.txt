@@ -1,0 +1,9 @@
+C:\Users\Admin\source\repos\ContractsList\bin\Debug\ContractsList.exe.config
+C:\Users\Admin\source\repos\ContractsList\bin\Debug\ContractsList.exe
+C:\Users\Admin\source\repos\ContractsList\bin\Debug\ContractsList.pdb
+C:\Users\Admin\source\repos\ContractsList\obj\Debug\ContractsList.csprojAssemblyReference.cache
+C:\Users\Admin\source\repos\ContractsList\obj\Debug\ContractsList.Authorization.resources
+C:\Users\Admin\source\repos\ContractsList\obj\Debug\ContractsList.Properties.Resources.resources
+C:\Users\Admin\source\repos\ContractsList\obj\Debug\ContractsList.csproj.GenerateResource.cache
+C:\Users\Admin\source\repos\ContractsList\obj\Debug\ContractsList.exe
+C:\Users\Admin\source\repos\ContractsList\obj\Debug\ContractsList.pdb

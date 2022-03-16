@@ -10,12 +10,15 @@ using System.Windows.Forms;
 
 namespace ContractsList
 {
+    // 
+
     public partial class Authorization : Form
     {
         public Authorization()
         {
             InitializeComponent();
         }
+
 
         private void Close_Click(object sender, EventArgs e)
         {

@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.login = new System.Windows.Forms.TextBox();
+            this.contractNumber = new System.Windows.Forms.TextBox();
             this.cardInfo = new System.Windows.Forms.TabControl();
             this.mainInfo = new System.Windows.Forms.TabPage();
             this.customerInfo = new System.Windows.Forms.TabPage();
             this.commonInfo = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
+            this.changeButton = new System.Windows.Forms.Button();
             this.splitter1 = new System.Windows.Forms.Splitter();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.saveButton = new System.Windows.Forms.Button();
+            this.cancelButton = new System.Windows.Forms.Button();
             this.nameMo = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.nameOmsu = new System.Windows.Forms.TextBox();
@@ -52,22 +52,28 @@
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.subvenceYear = new System.Windows.Forms.MaskedTextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
             this.fileInfo = new System.Windows.Forms.TabPage();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBox4 = new System.Windows.Forms.MaskedTextBox();
+            this.downloadFile = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cardInfo.SuspendLayout();
             this.mainInfo.SuspendLayout();
             this.customerInfo.SuspendLayout();
             this.commonInfo.SuspendLayout();
+            this.fileInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -81,15 +87,16 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Муниципальный контракт номер:";
             // 
-            // login
+            // contractNumber
             // 
-            this.login.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.login.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.login.Location = new System.Drawing.Point(383, 112);
-            this.login.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.login.Name = "login";
-            this.login.Size = new System.Drawing.Size(435, 37);
-            this.login.TabIndex = 2;
+            this.contractNumber.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.contractNumber.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.contractNumber.Location = new System.Drawing.Point(383, 112);
+            this.contractNumber.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.contractNumber.Name = "contractNumber";
+            this.contractNumber.Size = new System.Drawing.Size(435, 37);
+            this.contractNumber.TabIndex = 2;
+            this.contractNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.contractNumber_KeyPress);
             // 
             // cardInfo
             // 
@@ -140,18 +147,18 @@
             // 
             // commonInfo
             // 
+            this.commonInfo.Controls.Add(this.maskedTextBox4);
+            this.commonInfo.Controls.Add(this.maskedTextBox3);
+            this.commonInfo.Controls.Add(this.maskedTextBox2);
+            this.commonInfo.Controls.Add(this.maskedTextBox1);
             this.commonInfo.Controls.Add(this.label15);
-            this.commonInfo.Controls.Add(this.textBox6);
             this.commonInfo.Controls.Add(this.label14);
             this.commonInfo.Controls.Add(this.label13);
-            this.commonInfo.Controls.Add(this.textBox5);
             this.commonInfo.Controls.Add(this.label12);
             this.commonInfo.Controls.Add(this.subvenceYear);
             this.commonInfo.Controls.Add(this.label8);
             this.commonInfo.Controls.Add(this.label9);
-            this.commonInfo.Controls.Add(this.textBox3);
             this.commonInfo.Controls.Add(this.label10);
-            this.commonInfo.Controls.Add(this.textBox4);
             this.commonInfo.Controls.Add(this.label11);
             this.commonInfo.Location = new System.Drawing.Point(4, 22);
             this.commonInfo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -162,19 +169,24 @@
             this.commonInfo.Text = "Общие данные";
             this.commonInfo.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // changeButton
             // 
-            this.button1.Location = new System.Drawing.Point(17, 17);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(122, 32);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Изменить";
-            this.button1.UseVisualStyleBackColor = true;
+            this.changeButton.BackColor = System.Drawing.Color.DodgerBlue;
+            this.changeButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.changeButton.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.changeButton.ForeColor = System.Drawing.SystemColors.Window;
+            this.changeButton.Location = new System.Drawing.Point(17, 17);
+            this.changeButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.changeButton.Name = "changeButton";
+            this.changeButton.Size = new System.Drawing.Size(122, 32);
+            this.changeButton.TabIndex = 7;
+            this.changeButton.Text = "Изменить";
+            this.changeButton.UseVisualStyleBackColor = false;
             // 
             // splitter1
             // 
-            this.splitter1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.splitter1.BackColor = System.Drawing.SystemColors.Window;
+            this.splitter1.Cursor = System.Windows.Forms.Cursors.Default;
             this.splitter1.Dock = System.Windows.Forms.DockStyle.Top;
             this.splitter1.Location = new System.Drawing.Point(0, 0);
             this.splitter1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -183,25 +195,33 @@
             this.splitter1.TabIndex = 8;
             this.splitter1.TabStop = false;
             // 
-            // button2
+            // saveButton
             // 
-            this.button2.Location = new System.Drawing.Point(168, 17);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(122, 32);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Сохранить";
-            this.button2.UseVisualStyleBackColor = true;
+            this.saveButton.BackColor = System.Drawing.Color.DodgerBlue;
+            this.saveButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.saveButton.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.saveButton.ForeColor = System.Drawing.SystemColors.Window;
+            this.saveButton.Location = new System.Drawing.Point(168, 17);
+            this.saveButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.saveButton.Name = "saveButton";
+            this.saveButton.Size = new System.Drawing.Size(122, 32);
+            this.saveButton.TabIndex = 9;
+            this.saveButton.Text = "Сохранить";
+            this.saveButton.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // cancelButton
             // 
-            this.button3.Location = new System.Drawing.Point(316, 17);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(122, 32);
-            this.button3.TabIndex = 10;
-            this.button3.Text = "Отменить";
-            this.button3.UseVisualStyleBackColor = true;
+            this.cancelButton.BackColor = System.Drawing.Color.Firebrick;
+            this.cancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cancelButton.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.cancelButton.ForeColor = System.Drawing.SystemColors.Window;
+            this.cancelButton.Location = new System.Drawing.Point(316, 17);
+            this.cancelButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cancelButton.Name = "cancelButton";
+            this.cancelButton.Size = new System.Drawing.Size(122, 32);
+            this.cancelButton.TabIndex = 10;
+            this.cancelButton.Text = "Отменить";
+            this.cancelButton.UseVisualStyleBackColor = false;
             // 
             // nameMo
             // 
@@ -350,17 +370,6 @@
             this.label9.Text = "Год, на который выдана субвенция: ";
             this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox3.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBox3.Location = new System.Drawing.Point(12, 216);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(500, 37);
-            this.textBox3.TabIndex = 23;
-            // 
             // label10
             // 
             this.label10.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -370,17 +379,6 @@
             this.label10.Size = new System.Drawing.Size(425, 49);
             this.label10.TabIndex = 22;
             this.label10.Text = "Объём денежных средств, выплаченных Исполнителю по контракту";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox4.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBox4.Location = new System.Drawing.Point(12, 44);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(500, 37);
-            this.textBox4.TabIndex = 21;
             // 
             // label11
             // 
@@ -413,16 +411,6 @@
             this.label12.TabIndex = 29;
             this.label12.Text = "г.";
             // 
-            // textBox5
-            // 
-            this.textBox5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox5.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBox5.Location = new System.Drawing.Point(749, 115);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(49, 27);
-            this.textBox5.TabIndex = 30;
-            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -453,18 +441,10 @@
             this.label15.TabIndex = 34;
             this.label15.Text = "%";
             // 
-            // textBox6
-            // 
-            this.textBox6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox6.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBox6.Location = new System.Drawing.Point(749, 207);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(49, 27);
-            this.textBox6.TabIndex = 33;
-            // 
             // fileInfo
             // 
+            this.fileInfo.Controls.Add(this.pictureBox1);
+            this.fileInfo.Controls.Add(this.downloadFile);
             this.fileInfo.Location = new System.Drawing.Point(4, 22);
             this.fileInfo.Name = "fileInfo";
             this.fileInfo.Padding = new System.Windows.Forms.Padding(3);
@@ -473,17 +453,83 @@
             this.fileInfo.Text = "Файл контракта";
             this.fileInfo.UseVisualStyleBackColor = true;
             // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.maskedTextBox1.Location = new System.Drawing.Point(13, 216);
+            this.maskedTextBox1.Mask = "$999,999,999.00";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(159, 30);
+            this.maskedTextBox1.TabIndex = 11;
+            // 
+            // maskedTextBox2
+            // 
+            this.maskedTextBox2.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.maskedTextBox2.Location = new System.Drawing.Point(13, 44);
+            this.maskedTextBox2.Mask = "$999,999,999.00";
+            this.maskedTextBox2.Name = "maskedTextBox2";
+            this.maskedTextBox2.Size = new System.Drawing.Size(159, 30);
+            this.maskedTextBox2.TabIndex = 35;
+            // 
+            // maskedTextBox3
+            // 
+            this.maskedTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.maskedTextBox3.Location = new System.Drawing.Point(749, 114);
+            this.maskedTextBox3.Mask = "099";
+            this.maskedTextBox3.Name = "maskedTextBox3";
+            this.maskedTextBox3.Size = new System.Drawing.Size(49, 26);
+            this.maskedTextBox3.TabIndex = 36;
+            this.maskedTextBox3.ValidatingType = typeof(System.DateTime);
+            // 
+            // maskedTextBox4
+            // 
+            this.maskedTextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.maskedTextBox4.Location = new System.Drawing.Point(749, 206);
+            this.maskedTextBox4.Mask = "099";
+            this.maskedTextBox4.Name = "maskedTextBox4";
+            this.maskedTextBox4.Size = new System.Drawing.Size(49, 26);
+            this.maskedTextBox4.TabIndex = 37;
+            this.maskedTextBox4.ValidatingType = typeof(System.DateTime);
+            // 
+            // downloadFile
+            // 
+            this.downloadFile.BackColor = System.Drawing.Color.DodgerBlue;
+            this.downloadFile.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.downloadFile.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.downloadFile.ForeColor = System.Drawing.SystemColors.Window;
+            this.downloadFile.Location = new System.Drawing.Point(13, 22);
+            this.downloadFile.Margin = new System.Windows.Forms.Padding(2);
+            this.downloadFile.Name = "downloadFile";
+            this.downloadFile.Size = new System.Drawing.Size(122, 32);
+            this.downloadFile.TabIndex = 11;
+            this.downloadFile.Text = "Загрузить файл";
+            this.downloadFile.UseVisualStyleBackColor = false;
+            this.downloadFile.Click += new System.EventHandler(this.downloadFile_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(286, 22);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(173, 132);
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
+            // 
             // recordCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Window;
+            this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(862, 502);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.cancelButton);
+            this.Controls.Add(this.saveButton);
+            this.Controls.Add(this.changeButton);
             this.Controls.Add(this.cardInfo);
-            this.Controls.Add(this.login);
+            this.Controls.Add(this.contractNumber);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.splitter1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -498,6 +544,8 @@
             this.customerInfo.PerformLayout();
             this.commonInfo.ResumeLayout(false);
             this.commonInfo.PerformLayout();
+            this.fileInfo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -506,15 +554,15 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox login;
+        private System.Windows.Forms.TextBox contractNumber;
         private System.Windows.Forms.TabControl cardInfo;
         private System.Windows.Forms.TabPage mainInfo;
         private System.Windows.Forms.TabPage customerInfo;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button changeButton;
         private System.Windows.Forms.Splitter splitter1;
         private System.Windows.Forms.TabPage commonInfo;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button saveButton;
+        private System.Windows.Forms.Button cancelButton;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label6;
@@ -531,15 +579,19 @@
         private System.Windows.Forms.MaskedTextBox subvenceYear;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TabPage fileInfo;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox4;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
+        private System.Windows.Forms.Button downloadFile;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

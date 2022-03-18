@@ -36,5 +36,27 @@ namespace ContractsList
         {
 
         }
+
+        private void contractNumber_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != 8)
+                e.Handled = true;
+        }
+
+        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void downloadFile_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.Cancel)
+                return;
+            // получаем выбранный файл
+            string filename = openFileDialog1.FileName;
+            // читаем файл в строку
+            pictureBox1.Image = Image.FromFile(filename);
+            MessageBox.Show("Файл открыт");
+        }
     }
 }

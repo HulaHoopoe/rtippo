@@ -61,7 +61,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(211, 112);
+            this.label2.Location = new System.Drawing.Point(232, 109);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(164, 33);
             this.label2.TabIndex = 2;
@@ -98,7 +98,7 @@
             // 
             // loginButton
             // 
-            this.loginButton.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.loginButton.BackColor = System.Drawing.Color.Lime;
             this.loginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.loginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.loginButton.Location = new System.Drawing.Point(366, 304);
@@ -111,7 +111,7 @@
             // 
             // Close
             // 
-            this.Close.BackColor = System.Drawing.Color.Salmon;
+            this.Close.BackColor = System.Drawing.Color.Tomato;
             this.Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Close.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Close.Location = new System.Drawing.Point(483, 431);

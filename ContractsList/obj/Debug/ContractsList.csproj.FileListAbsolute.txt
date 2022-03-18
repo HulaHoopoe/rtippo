@@ -7,3 +7,4 @@ C:\Users\Admin\source\repos\ContractsList\obj\Debug\ContractsList.Properties.Res
 C:\Users\Admin\source\repos\ContractsList\obj\Debug\ContractsList.csproj.GenerateResource.cache
 C:\Users\Admin\source\repos\ContractsList\obj\Debug\ContractsList.exe
 C:\Users\Admin\source\repos\ContractsList\obj\Debug\ContractsList.pdb
+C:\Users\Admin\source\repos\ContractsList\obj\Debug\ContractsList.recordCard.resources

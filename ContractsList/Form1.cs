@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace ContractsList
 {
+    // 
 
     public partial class Authorization : Form
     {
@@ -26,7 +27,10 @@ namespace ContractsList
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-            Close();
+            Form f2 = new recordCard();
+            f2.Owner = this;
+            f2.Show();
+            this.Hide();
         }
     }
 }

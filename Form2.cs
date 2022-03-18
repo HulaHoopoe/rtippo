@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ContractsList
 {
-    public partial class Form2 : Form
+    public partial class recordCard : Form
     {
-        public Form2()
+        public recordCard()
         {
             InitializeComponent();
         }

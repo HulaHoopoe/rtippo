@@ -143,7 +143,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 12);
+            this.button1.Location = new System.Drawing.Point(23, 21);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(123, 39);
             this.button1.TabIndex = 7;
@@ -172,7 +172,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(141, 12);
+            this.button2.Location = new System.Drawing.Point(176, 21);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(123, 39);
             this.button2.TabIndex = 9;
@@ -181,11 +181,11 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(270, 12);
+            this.button3.Location = new System.Drawing.Point(331, 21);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(123, 39);
             this.button3.TabIndex = 10;
-            this.button3.Text = "Удалить";
+            this.button3.Text = "Отменить";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // Form2

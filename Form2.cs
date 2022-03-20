@@ -65,5 +65,43 @@ namespace ContractsList
             if (contractFilename.Text != "")
                 Process.Start(contractFilename.Text);
         }
+
+        private void changeButton_Click(object sender, EventArgs e)
+        {
+            contractNumber.Enabled = true;
+            contractPlace.Enabled = true;
+            contractExecutor.Enabled = true;
+            contractDateCreate.Enabled = true;
+            contractDuration.Enabled = true;
+            contractOmsu.Enabled = true;
+            contractMo.Enabled = true;
+            contractPrice.Enabled = true;
+            contractExecutorPrice.Enabled = true;
+            contractSubvenceYear.Enabled = true;
+            contractSubvencePricePart.Enabled = true;
+            contractSubvenceExecutorPart.Enabled = true;
+            changeButton.Enabled = false;
+            saveButton.Enabled = true;
+            cancelButton.Enabled = true;
+        }
+
+        private void saveButton_Click(object sender, EventArgs e)
+        {
+            contractNumber.Enabled = false;
+            contractPlace.Enabled = false;
+            contractExecutor.Enabled = false;
+            contractDateCreate.Enabled = false;
+            contractDuration.Enabled = false;
+            contractOmsu.Enabled = false;
+            contractMo.Enabled = false;
+            contractPrice.Enabled = false;
+            contractExecutorPrice.Enabled = false;
+            contractSubvenceYear.Enabled = false;
+            contractSubvencePricePart.Enabled = false;
+            contractSubvenceExecutorPart.Enabled = false;
+            changeButton.Enabled = true;
+            saveButton.Enabled = false;
+            cancelButton.Enabled = false;
+        }
     }
 }

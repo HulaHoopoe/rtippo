@@ -32,29 +32,29 @@
             this.contractNumber = new System.Windows.Forms.TextBox();
             this.cardInfo = new System.Windows.Forms.TabControl();
             this.mainInfo = new System.Windows.Forms.TabPage();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.contractDuration = new System.Windows.Forms.DateTimePicker();
+            this.contractDateCreate = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.contractExecutor = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.contractPlace = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.customerInfo = new System.Windows.Forms.TabPage();
-            this.nameMo = new System.Windows.Forms.TextBox();
+            this.contractMo = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.nameOmsu = new System.Windows.Forms.TextBox();
+            this.contractOmsu = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.commonInfo = new System.Windows.Forms.TabPage();
-            this.maskedTextBox4 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.contractSubvenceExecutorPart = new System.Windows.Forms.MaskedTextBox();
+            this.contractSubvencePricePart = new System.Windows.Forms.MaskedTextBox();
+            this.contractPrice = new System.Windows.Forms.MaskedTextBox();
+            this.contractExecutorPrice = new System.Windows.Forms.MaskedTextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.subvenceYear = new System.Windows.Forms.MaskedTextBox();
+            this.contractSubvenceYear = new System.Windows.Forms.MaskedTextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -90,6 +90,7 @@
             // 
             // contractNumber
             // 
+            this.contractNumber.Enabled = false;
             this.contractNumber.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.contractNumber.ForeColor = System.Drawing.SystemColors.WindowText;
             this.contractNumber.Location = new System.Drawing.Point(383, 112);
@@ -115,13 +116,13 @@
             // 
             // mainInfo
             // 
-            this.mainInfo.Controls.Add(this.dateTimePicker2);
-            this.mainInfo.Controls.Add(this.dateTimePicker1);
+            this.mainInfo.Controls.Add(this.contractDuration);
+            this.mainInfo.Controls.Add(this.contractDateCreate);
             this.mainInfo.Controls.Add(this.label6);
             this.mainInfo.Controls.Add(this.label7);
-            this.mainInfo.Controls.Add(this.textBox1);
+            this.mainInfo.Controls.Add(this.contractExecutor);
             this.mainInfo.Controls.Add(this.label4);
-            this.mainInfo.Controls.Add(this.textBox2);
+            this.mainInfo.Controls.Add(this.contractPlace);
             this.mainInfo.Controls.Add(this.label5);
             this.mainInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.mainInfo.Location = new System.Drawing.Point(4, 22);
@@ -132,21 +133,23 @@
             this.mainInfo.Text = "Общая информация";
             this.mainInfo.UseVisualStyleBackColor = true;
             // 
-            // dateTimePicker2
+            // contractDuration
             // 
-            this.dateTimePicker2.CalendarFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dateTimePicker2.Location = new System.Drawing.Point(602, 129);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 23);
-            this.dateTimePicker2.TabIndex = 19;
+            this.contractDuration.CalendarFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.contractDuration.Enabled = false;
+            this.contractDuration.Location = new System.Drawing.Point(602, 129);
+            this.contractDuration.Name = "contractDuration";
+            this.contractDuration.Size = new System.Drawing.Size(200, 23);
+            this.contractDuration.TabIndex = 19;
             // 
-            // dateTimePicker1
+            // contractDateCreate
             // 
-            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(602, 44);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 23);
-            this.dateTimePicker1.TabIndex = 18;
+            this.contractDateCreate.CalendarFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.contractDateCreate.Enabled = false;
+            this.contractDateCreate.Location = new System.Drawing.Point(602, 44);
+            this.contractDateCreate.Name = "contractDateCreate";
+            this.contractDateCreate.Size = new System.Drawing.Size(200, 23);
+            this.contractDateCreate.TabIndex = 18;
             // 
             // label6
             // 
@@ -170,16 +173,17 @@
             this.label7.TabIndex = 14;
             this.label7.Text = "Дата заключения МК";
             // 
-            // textBox1
+            // contractExecutor
             // 
-            this.textBox1.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBox1.Location = new System.Drawing.Point(13, 191);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(500, 82);
-            this.textBox1.TabIndex = 13;
+            this.contractExecutor.Enabled = false;
+            this.contractExecutor.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.contractExecutor.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.contractExecutor.Location = new System.Drawing.Point(13, 191);
+            this.contractExecutor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.contractExecutor.Multiline = true;
+            this.contractExecutor.Name = "contractExecutor";
+            this.contractExecutor.Size = new System.Drawing.Size(500, 82);
+            this.contractExecutor.TabIndex = 13;
             // 
             // label4
             // 
@@ -192,16 +196,17 @@
             this.label4.TabIndex = 12;
             this.label4.Text = "Исполнитель МК";
             // 
-            // textBox2
+            // contractPlace
             // 
-            this.textBox2.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox2.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBox2.Location = new System.Drawing.Point(13, 44);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(500, 82);
-            this.textBox2.TabIndex = 11;
+            this.contractPlace.Enabled = false;
+            this.contractPlace.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.contractPlace.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.contractPlace.Location = new System.Drawing.Point(13, 44);
+            this.contractPlace.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.contractPlace.Multiline = true;
+            this.contractPlace.Name = "contractPlace";
+            this.contractPlace.Size = new System.Drawing.Size(500, 82);
+            this.contractPlace.TabIndex = 11;
             // 
             // label5
             // 
@@ -216,9 +221,9 @@
             // 
             // customerInfo
             // 
-            this.customerInfo.Controls.Add(this.nameMo);
+            this.customerInfo.Controls.Add(this.contractMo);
             this.customerInfo.Controls.Add(this.label3);
-            this.customerInfo.Controls.Add(this.nameOmsu);
+            this.customerInfo.Controls.Add(this.contractOmsu);
             this.customerInfo.Controls.Add(this.label2);
             this.customerInfo.Location = new System.Drawing.Point(4, 22);
             this.customerInfo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -228,16 +233,17 @@
             this.customerInfo.Text = "Заказчик";
             this.customerInfo.UseVisualStyleBackColor = true;
             // 
-            // nameMo
+            // contractMo
             // 
-            this.nameMo.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.nameMo.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.nameMo.Location = new System.Drawing.Point(13, 191);
-            this.nameMo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.nameMo.Multiline = true;
-            this.nameMo.Name = "nameMo";
-            this.nameMo.Size = new System.Drawing.Size(500, 82);
-            this.nameMo.TabIndex = 9;
+            this.contractMo.Enabled = false;
+            this.contractMo.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.contractMo.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.contractMo.Location = new System.Drawing.Point(13, 191);
+            this.contractMo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.contractMo.Multiline = true;
+            this.contractMo.Name = "contractMo";
+            this.contractMo.Size = new System.Drawing.Size(500, 82);
+            this.contractMo.TabIndex = 9;
             // 
             // label3
             // 
@@ -250,16 +256,17 @@
             this.label3.TabIndex = 8;
             this.label3.Text = "Муниципальное образование";
             // 
-            // nameOmsu
+            // contractOmsu
             // 
-            this.nameOmsu.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.nameOmsu.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.nameOmsu.Location = new System.Drawing.Point(13, 44);
-            this.nameOmsu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.nameOmsu.Multiline = true;
-            this.nameOmsu.Name = "nameOmsu";
-            this.nameOmsu.Size = new System.Drawing.Size(500, 82);
-            this.nameOmsu.TabIndex = 7;
+            this.contractOmsu.Enabled = false;
+            this.contractOmsu.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.contractOmsu.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.contractOmsu.Location = new System.Drawing.Point(13, 44);
+            this.contractOmsu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.contractOmsu.Multiline = true;
+            this.contractOmsu.Name = "contractOmsu";
+            this.contractOmsu.Size = new System.Drawing.Size(500, 82);
+            this.contractOmsu.TabIndex = 7;
             // 
             // label2
             // 
@@ -274,15 +281,15 @@
             // 
             // commonInfo
             // 
-            this.commonInfo.Controls.Add(this.maskedTextBox4);
-            this.commonInfo.Controls.Add(this.maskedTextBox3);
-            this.commonInfo.Controls.Add(this.maskedTextBox2);
-            this.commonInfo.Controls.Add(this.maskedTextBox1);
+            this.commonInfo.Controls.Add(this.contractSubvenceExecutorPart);
+            this.commonInfo.Controls.Add(this.contractSubvencePricePart);
+            this.commonInfo.Controls.Add(this.contractPrice);
+            this.commonInfo.Controls.Add(this.contractExecutorPrice);
             this.commonInfo.Controls.Add(this.label15);
             this.commonInfo.Controls.Add(this.label14);
             this.commonInfo.Controls.Add(this.label13);
             this.commonInfo.Controls.Add(this.label12);
-            this.commonInfo.Controls.Add(this.subvenceYear);
+            this.commonInfo.Controls.Add(this.contractSubvenceYear);
             this.commonInfo.Controls.Add(this.label8);
             this.commonInfo.Controls.Add(this.label9);
             this.commonInfo.Controls.Add(this.label10);
@@ -296,49 +303,53 @@
             this.commonInfo.Text = "Общие данные";
             this.commonInfo.UseVisualStyleBackColor = true;
             // 
-            // maskedTextBox4
+            // contractSubvenceExecutorPart
             // 
-            this.maskedTextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.maskedTextBox4.Location = new System.Drawing.Point(749, 206);
-            this.maskedTextBox4.Mask = "099";
-            this.maskedTextBox4.Name = "maskedTextBox4";
-            this.maskedTextBox4.Size = new System.Drawing.Size(49, 26);
-            this.maskedTextBox4.TabIndex = 37;
-            this.maskedTextBox4.ValidatingType = typeof(System.DateTime);
+            this.contractSubvenceExecutorPart.Enabled = false;
+            this.contractSubvenceExecutorPart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.contractSubvenceExecutorPart.Location = new System.Drawing.Point(680, 209);
+            this.contractSubvenceExecutorPart.Mask = "099";
+            this.contractSubvenceExecutorPart.Name = "contractSubvenceExecutorPart";
+            this.contractSubvenceExecutorPart.Size = new System.Drawing.Size(49, 26);
+            this.contractSubvenceExecutorPart.TabIndex = 37;
+            this.contractSubvenceExecutorPart.ValidatingType = typeof(System.DateTime);
             // 
-            // maskedTextBox3
+            // contractSubvencePricePart
             // 
-            this.maskedTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.maskedTextBox3.Location = new System.Drawing.Point(749, 114);
-            this.maskedTextBox3.Mask = "099";
-            this.maskedTextBox3.Name = "maskedTextBox3";
-            this.maskedTextBox3.Size = new System.Drawing.Size(49, 26);
-            this.maskedTextBox3.TabIndex = 36;
-            this.maskedTextBox3.ValidatingType = typeof(System.DateTime);
+            this.contractSubvencePricePart.Enabled = false;
+            this.contractSubvencePricePart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.contractSubvencePricePart.Location = new System.Drawing.Point(680, 117);
+            this.contractSubvencePricePart.Mask = "099";
+            this.contractSubvencePricePart.Name = "contractSubvencePricePart";
+            this.contractSubvencePricePart.Size = new System.Drawing.Size(49, 26);
+            this.contractSubvencePricePart.TabIndex = 36;
+            this.contractSubvencePricePart.ValidatingType = typeof(System.DateTime);
             // 
-            // maskedTextBox2
+            // contractPrice
             // 
-            this.maskedTextBox2.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.maskedTextBox2.Location = new System.Drawing.Point(13, 44);
-            this.maskedTextBox2.Mask = "$999,999,999.00";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(159, 30);
-            this.maskedTextBox2.TabIndex = 35;
+            this.contractPrice.Enabled = false;
+            this.contractPrice.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.contractPrice.Location = new System.Drawing.Point(13, 44);
+            this.contractPrice.Mask = "$999,999,999.00";
+            this.contractPrice.Name = "contractPrice";
+            this.contractPrice.Size = new System.Drawing.Size(159, 30);
+            this.contractPrice.TabIndex = 35;
             // 
-            // maskedTextBox1
+            // contractExecutorPrice
             // 
-            this.maskedTextBox1.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.maskedTextBox1.Location = new System.Drawing.Point(13, 216);
-            this.maskedTextBox1.Mask = "$999,999,999.00";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(159, 30);
-            this.maskedTextBox1.TabIndex = 11;
+            this.contractExecutorPrice.Enabled = false;
+            this.contractExecutorPrice.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.contractExecutorPrice.Location = new System.Drawing.Point(13, 216);
+            this.contractExecutorPrice.Mask = "$999,999,999.00";
+            this.contractExecutorPrice.Name = "contractExecutorPrice";
+            this.contractExecutorPrice.Size = new System.Drawing.Size(159, 30);
+            this.contractExecutorPrice.TabIndex = 11;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label15.Location = new System.Drawing.Point(803, 209);
+            this.label15.Location = new System.Drawing.Point(734, 212);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(23, 20);
             this.label15.TabIndex = 34;
@@ -347,7 +358,7 @@
             // label14
             // 
             this.label14.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label14.Location = new System.Drawing.Point(564, 177);
+            this.label14.Location = new System.Drawing.Point(491, 180);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(184, 80);
@@ -358,7 +369,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label13.Location = new System.Drawing.Point(803, 117);
+            this.label13.Location = new System.Drawing.Point(734, 120);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(23, 20);
             this.label13.TabIndex = 31;
@@ -368,26 +379,27 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label12.Location = new System.Drawing.Point(804, 29);
+            this.label12.Location = new System.Drawing.Point(735, 32);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(20, 20);
             this.label12.TabIndex = 29;
             this.label12.Text = "г.";
             // 
-            // subvenceYear
+            // contractSubvenceYear
             // 
-            this.subvenceYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.subvenceYear.Location = new System.Drawing.Point(749, 26);
-            this.subvenceYear.Mask = "0000";
-            this.subvenceYear.Name = "subvenceYear";
-            this.subvenceYear.Size = new System.Drawing.Size(49, 26);
-            this.subvenceYear.TabIndex = 28;
-            this.subvenceYear.ValidatingType = typeof(System.DateTime);
+            this.contractSubvenceYear.Enabled = false;
+            this.contractSubvenceYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.contractSubvenceYear.Location = new System.Drawing.Point(680, 29);
+            this.contractSubvenceYear.Mask = "0000";
+            this.contractSubvenceYear.Name = "contractSubvenceYear";
+            this.contractSubvenceYear.Size = new System.Drawing.Size(49, 26);
+            this.contractSubvenceYear.TabIndex = 28;
+            this.contractSubvenceYear.ValidatingType = typeof(System.DateTime);
             // 
             // label8
             // 
             this.label8.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(560, 108);
+            this.label8.Location = new System.Drawing.Point(491, 111);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(171, 43);
@@ -397,7 +409,7 @@
             // label9
             // 
             this.label9.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label9.Location = new System.Drawing.Point(564, 19);
+            this.label9.Location = new System.Drawing.Point(491, 22);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(144, 42);
@@ -482,6 +494,7 @@
             this.changeButton.TabIndex = 7;
             this.changeButton.Text = "Изменить";
             this.changeButton.UseVisualStyleBackColor = false;
+            this.changeButton.Click += new System.EventHandler(this.changeButton_Click);
             // 
             // splitter1
             // 
@@ -498,6 +511,7 @@
             // saveButton
             // 
             this.saveButton.BackColor = System.Drawing.Color.DodgerBlue;
+            this.saveButton.Enabled = false;
             this.saveButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.saveButton.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.saveButton.ForeColor = System.Drawing.SystemColors.Window;
@@ -508,10 +522,12 @@
             this.saveButton.TabIndex = 9;
             this.saveButton.Text = "Сохранить";
             this.saveButton.UseVisualStyleBackColor = false;
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // cancelButton
             // 
             this.cancelButton.BackColor = System.Drawing.Color.Firebrick;
+            this.cancelButton.Enabled = false;
             this.cancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cancelButton.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cancelButton.ForeColor = System.Drawing.SystemColors.Window;
@@ -595,20 +611,20 @@
         private System.Windows.Forms.TabPage commonInfo;
         private System.Windows.Forms.Button saveButton;
         private System.Windows.Forms.Button cancelButton;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker contractDuration;
+        private System.Windows.Forms.DateTimePicker contractDateCreate;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox contractExecutor;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox contractPlace;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox nameMo;
+        private System.Windows.Forms.TextBox contractMo;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox nameOmsu;
+        private System.Windows.Forms.TextBox contractOmsu;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.MaskedTextBox subvenceYear;
+        private System.Windows.Forms.MaskedTextBox contractSubvenceYear;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
@@ -617,10 +633,10 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TabPage fileInfo;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox4;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
+        private System.Windows.Forms.MaskedTextBox contractExecutorPrice;
+        private System.Windows.Forms.MaskedTextBox contractSubvenceExecutorPart;
+        private System.Windows.Forms.MaskedTextBox contractSubvencePricePart;
+        private System.Windows.Forms.MaskedTextBox contractPrice;
         private System.Windows.Forms.Button downloadFile;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;

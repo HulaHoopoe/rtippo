@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace ContractsList
 {
@@ -55,8 +56,14 @@ namespace ContractsList
             // получаем выбранный файл
             string filename = openFileDialog1.FileName;
             // читаем файл в строку
-            pictureBox1.Image = Image.FromFile(filename);
-            MessageBox.Show("Файл открыт");
+            contractFilename.Text = filename;
+            MessageBox.Show("Файл сохранен");
+        }
+
+        private void contractFilename_Click(object sender, EventArgs e)
+        {
+            if (contractFilename.Text != "")
+                Process.Start(contractFilename.Text);
         }
     }
 }

@@ -102,7 +102,6 @@ namespace ContractsList
             changeButton.Enabled = true;
             saveButton.Enabled = false;
             cancelButton.Enabled = false;
-
         }
     }
 }

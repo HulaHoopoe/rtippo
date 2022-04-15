@@ -11,9 +11,9 @@ using System.Diagnostics;
 
 namespace ContractsList
 {
-    public partial class recordCard : Form
+    public partial class RecordCardForm : Form
     {
-        public recordCard()
+        public RecordCardForm()
         {
             InitializeComponent();
         }
@@ -74,7 +74,6 @@ namespace ContractsList
             contractDateCreate.Enabled = true;
             contractDuration.Enabled = true;
             contractOmsu.Enabled = true;
-            contractMo.Enabled = true;
             contractPrice.Enabled = true;
             contractExecutorPrice.Enabled = true;
             contractSubvenceYear.Enabled = true;
@@ -93,7 +92,6 @@ namespace ContractsList
             contractDateCreate.Enabled = false;
             contractDuration.Enabled = false;
             contractOmsu.Enabled = false;
-            contractMo.Enabled = false;
             contractPrice.Enabled = false;
             contractExecutorPrice.Enabled = false;
             contractSubvenceYear.Enabled = false;

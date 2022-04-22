@@ -12,6 +12,11 @@ namespace ContractsList
 
         User user { get; }
 
+        public User Authorization(string login, string password)
+        {
+            return user.Authorization(login, password);
+        }
+
         public MunicipalContract GetContract(int numberApplication)
         {
             return repository.GetContract(numberApplication);

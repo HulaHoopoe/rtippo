@@ -16,9 +16,10 @@ namespace ContractsList
 
         User()
         {
+
         }
 
-        public User Authorization()
+        public User Authorization(string login, string password)
         {
             return this;
         }

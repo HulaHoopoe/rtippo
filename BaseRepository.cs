@@ -8,7 +8,7 @@ namespace ContractsList
 {
     class BaseRepository
     {
-        public MunicipalContract GetContract(int numberApplication)
+        public MunicipalContract GetContract(int contractID)
         {
             MunicipalContract mc = new MunicipalContract();
             return mc;
@@ -21,27 +21,27 @@ namespace ContractsList
         }
 
 
-        public void AddContract(User user, MunicipalContract contract)
+        public MunicipalContract AddContract(MunicipalContract contract)
+        {
+            return GetContract(contract.contractID);
+        }
+
+        public void UpdateContract(MunicipalContract contract)
         {
 
         }
 
-        public void UpdateContract(User user, MunicipalContract contract)
+        public void DeleteContract(List<MunicipalContract> contracts)
         {
 
         }
 
-        public void DeleteContract(User user, List<MunicipalContract> contracts)
+        public void SaveFile(int contractID, File file)
         {
 
         }
 
-        public void SaveFile(User user, MunicipalContract contract, File file)
-        {
-
-        }
-
-        public void DeleteFile(User user, MunicipalContract contract)
+        public void DeleteFile(int contractID)
         {
 
         }

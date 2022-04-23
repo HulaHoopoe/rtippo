@@ -29,27 +29,27 @@ namespace ContractsList
 
         public void AddContract(MunicipalContract contract)
         {
-            repository.AddContract(user, contract);
+            repository.AddContract(contract);
         }
 
         public void UpdateContract(MunicipalContract contract)
         {
-            repository.UpdateContract(user, contract);
+            repository.UpdateContract(contract);
         }
 
         public void DeleteContract(List<MunicipalContract> contracts)
         {
-            repository.DeleteContract(user, contracts);
+            repository.DeleteContract(contracts);
         }
 
-        public void SaveFile(MunicipalContract contract, File file)
+        public void SaveFile(int contractID, File file)
         {
-            repository.SaveFile(user, contract, file);
+            repository.SaveFile(contractID, file);
         }
 
-        public void DeleteFile(MunicipalContract contract)
+        public void DeleteFile(int contractID)
         {
-            repository.DeleteFile(user, contract);
+            repository.DeleteFile(contractID);
         }
 
     }

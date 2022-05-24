@@ -41,7 +41,7 @@ namespace ContractsList
 
         }
 
-        public void DeleteFile(int contractID)
+        public void DeleteFile(int fileId)
         {
 
         }

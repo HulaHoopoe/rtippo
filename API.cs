@@ -24,7 +24,7 @@ namespace ContractsList
 
         public List<MunicipalContract> GetContractList(Dictionary<string, string> filters)
         {
-            return repository.GetContractList(user, filters);
+            return  repository.GetContractList(user, filters);
         }
 
         public void AddContract(MunicipalContract contract)
@@ -47,9 +47,9 @@ namespace ContractsList
             repository.SaveFile(contractID, file);
         }
 
-        public void DeleteFile(int contractID)
+        public void DeleteFile(int fileId)
         {
-            repository.DeleteFile(contractID);
+            repository.DeleteFile(fileId);
         }
 
     }

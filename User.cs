@@ -8,7 +8,7 @@ namespace ContractsList
 {
     internal class User
     {
-        private int userID;
+        private int Id;
         private string login;
         private string password;
         public Role roleUser;
@@ -27,7 +27,7 @@ namespace ContractsList
 
     internal class Role
     {
-        private int roleID;
+        private int Id;
         public string roleName;
 
         public Role() { }

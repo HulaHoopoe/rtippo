@@ -8,7 +8,7 @@ namespace ContractsList
 {
     internal class MunicipalContract
     {
-        public int contractID;
+        public int Id;
         private int contractNumber;
         private DateTime conclusion;
         private DateTime validity;

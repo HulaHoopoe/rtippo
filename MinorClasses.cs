@@ -8,7 +8,7 @@ namespace ContractsList
 {
     internal class Locality
     {
-        private int localityID;
+        private int Id;
         private string name;
         private Municipality municipality;
 
@@ -20,7 +20,7 @@ namespace ContractsList
 
     internal class Municipality
     {
-        private int municipalityID;
+        private int Id;
         private string name;
 
         Municipality()
@@ -31,7 +31,7 @@ namespace ContractsList
 
     internal class Organization
     {
-        private int organizationID;
+        private int Id;
         private string nameOrganization;
         private Locality localityOrganization;
         private CategoryOrganization categoryOrganization;
@@ -43,7 +43,7 @@ namespace ContractsList
 
     internal class CategoryOrganization
     {
-        private int categoryID;
+        private int Id;
         private string name;
         CategoryOrganization()
         {
@@ -53,7 +53,7 @@ namespace ContractsList
 
     internal class Subvence
     {
-        private int subvenceID;
+        private int Id;
         private int year;
         private int sum;
         private Municipality municipalitySubvence;
@@ -66,7 +66,7 @@ namespace ContractsList
 
     internal class File
     {
-        private int fileID;
+        private int Id;
         private string source;
 
         File()

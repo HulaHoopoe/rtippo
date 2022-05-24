@@ -23,7 +23,7 @@ namespace ContractsList
 
         public MunicipalContract AddContract(MunicipalContract contract)
         {
-            return GetContract(contract.contractID);
+            return GetContract(contract.Id);
         }
 
         public void UpdateContract(MunicipalContract contract)

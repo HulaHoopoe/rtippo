@@ -10,11 +10,9 @@ using System.Windows.Forms;
 
 namespace ContractsList
 {
-    // 
-
-    public partial class Authorization : Form
+    public partial class AuthForm : Form
     {
-        public Authorization()
+        public AuthForm()
         {
             InitializeComponent();
         }
@@ -25,9 +23,19 @@ namespace ContractsList
             Close();
         }
 
-        private void loginButton_Click(object sender, EventArgs e)
+        private void LoginButton_Click(object sender, EventArgs e)
         {
-            Close();
+            Form f2 = new RecordCardForm
+            {
+                Owner = this
+            };
+            f2.Show();
+            this.Hide();
+        }
+
+        private void AuthForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
